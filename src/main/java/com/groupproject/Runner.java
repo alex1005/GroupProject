@@ -2,11 +2,9 @@ package com.groupproject;
 
 public class Runner {
     public static void main(String[] args)  {
-
-        WhiteFactory wf = new WhiteFactory();
-        BlackFactory bf = new BlackFactory();
-
-        wf.createTriangle();
-        bf.createTriangle();
+        BaseFactory baseFactoryBlack = AbstractFactory.getFactory(Color.BLACK);
+        BaseFactory baseFactoryWhite = AbstractFactory.getFactory(Color.WHITE);
+        baseFactoryBlack.createTriangle();
+        baseFactoryWhite.createTriangle();
     }
 }

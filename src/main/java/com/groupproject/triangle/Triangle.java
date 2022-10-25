@@ -1,8 +1,6 @@
 package com.groupproject.triangle;
 
-import com.groupproject.Color;
-
-public class Triangle {
+public abstract class Triangle {
     protected float lengthOne;
     protected float lengthTwo;
     protected float lengthThree;
@@ -12,7 +10,6 @@ public class Triangle {
         lengthOne = 1;
         lengthTwo = 1;
         lengthThree = 1;
-
     }
 
     public Triangle(int a, int b, int c) throws Exception {
@@ -36,9 +33,8 @@ public class Triangle {
                 "\nside one length = " + lengthOne +
                 "\nside two length = " + lengthTwo +
                 "\nside three length = " + lengthThree
-                 );
+        );
     }
-
 
 
     public float getLengthOne() {
