@@ -5,7 +5,7 @@ import com.groupproject.Color;
 public class WhiteTriangle extends Triangle {
     private final Color color = Color.WHITE;
 
-    public WhiteTriangle(int a, int b, int c) throws Exception {
+    public WhiteTriangle(int a, int b, int c) {
         super(a, b, c);
     }
 
@@ -19,7 +19,7 @@ public class WhiteTriangle extends Triangle {
 
     @Override
     public void draw() {
-        super.draw();
+        System.out.println(this);
         System.out.println("\tcolor = " + this.getColor());
     }
 

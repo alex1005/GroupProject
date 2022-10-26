@@ -12,10 +12,10 @@ public abstract class Triangle {
         lengthThree = 1;
     }
 
-    public Triangle(int a, int b, int c) throws Exception {
+    public Triangle(int a, int b, int c) {
         boolean triInq = triangleInequality(a, b, c);
         if (!triInq) {
-            throw new Exception("Triangle Inequality");
+            throw new RuntimeException("Triangle Inequality");
         } else {
             lengthOne = a;
             lengthTwo = b;
@@ -27,6 +27,15 @@ public abstract class Triangle {
     public boolean triangleInequality(int a, int b, int c) {
         return (a < b + c && b < a + c && c < a + b);
     }
+
+    public String toString() {
+        return "Triangle:" +
+                "\n\tside one length = " + lengthOne +
+                "\n\tside two length = " + lengthTwo +
+                "\n\tside three length = " + lengthThree;
+    }
+
+    public abstract void draw();
 
     public float getLengthOne() {
         return lengthOne;
@@ -51,17 +60,6 @@ public abstract class Triangle {
 
     public void setLengthThree(float lengthParam) {
         lengthThree = lengthParam;
-    }
-
-    public String toString() {
-        return "Triangle:" +
-                "\n\tside one length = " + lengthOne +
-                "\n\tside two length = " + lengthTwo +
-                "\n\tside three length = " + lengthThree;
-    }
-
-    public void draw() {
-        System.out.println(this);
     }
 
 }
