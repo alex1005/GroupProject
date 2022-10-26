@@ -19,7 +19,7 @@ public abstract class AbstractTriangle implements Triangle {
     public AbstractTriangle(double lengthOne, double lengthTwo, double lengthThree, Color color) {
         boolean triInq = triangleInequality(lengthOne, lengthTwo, lengthThree);
         if (!triInq) {
-            throw new RuntimeException("Triangle Inequality");
+            throw new IllegalArgumentException("Triangle Inequality");
         } else {
             this.lengthOne = lengthOne;
             this.lengthTwo = lengthTwo;
