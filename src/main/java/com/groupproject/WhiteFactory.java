@@ -1,5 +1,7 @@
 package com.groupproject;
 
+import com.groupproject.circle.Circle;
+import com.groupproject.circle.WhiteCircle;
 import com.groupproject.triangle.Triangle;
 import com.groupproject.triangle.WhiteTriangle;
 
@@ -23,6 +25,13 @@ public class WhiteFactory implements BaseFactory {
 
     @Override
     public void createCircle() {
+        Circle circle = new WhiteCircle();
+        circle.draw();
+    }
 
+    @Override
+    public void createCircle(double radius) {
+        Circle circle = new WhiteCircle(radius);
+        circle.draw();
     }
 }
