@@ -17,9 +17,10 @@ public class BlackTriangle extends Triangle {
         return color;
     }
 
+    @Override
     public void draw() {
         super.draw();
-        System.out.println("color = " + color);
+        System.out.println("\tcolor = " + this.getColor());
     }
 
 }

@@ -28,15 +28,6 @@ public abstract class Triangle {
         return (a < b + c && b < a + c && c < a + b);
     }
 
-    public void draw() {
-        System.out.println("Triangle:" +
-                "\nside one length = " + lengthOne +
-                "\nside two length = " + lengthTwo +
-                "\nside three length = " + lengthThree
-        );
-    }
-
-
     public float getLengthOne() {
         return lengthOne;
     }
@@ -60,6 +51,17 @@ public abstract class Triangle {
 
     public void setLengthThree(float lengthParam) {
         lengthThree = lengthParam;
+    }
+
+    public String toString() {
+        return "Triangle:" +
+                "\n\tside one length = " + lengthOne +
+                "\n\tside two length = " + lengthTwo +
+                "\n\tside three length = " + lengthThree;
+    }
+
+    public void draw() {
+        System.out.println(this);
     }
 
 }
