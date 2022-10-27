@@ -10,5 +10,11 @@ public class Runner {
 
         baseFactoryBlack.createTriangle(1.2, 1.2, 1.2);
         baseFactoryWhite.createTriangle(1.3, 1.3, 1.3);
+
+        baseFactoryBlack.createCircle();
+        baseFactoryWhite.createCircle();
+
+        baseFactoryBlack.createCircle(1.2);
+        baseFactoryWhite.createCircle(1.3);
     }
 }
