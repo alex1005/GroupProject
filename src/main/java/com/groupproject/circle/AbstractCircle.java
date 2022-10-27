@@ -8,11 +8,13 @@ public abstract class AbstractCircle implements Circle {
 
 
     public AbstractCircle(Color color) {
+        System.out.printf("AbstractCircle: AbstractCircle(%s)%n", color);
         radius = 1;
         this.color = color;
     }
 
     public AbstractCircle(double radius, Color color) {
+        System.out.printf("AbstractCircle: AbstractCircle(%f, %s)%n", radius, color);
         this.radius = radius;
         this.color = color;
     }

@@ -10,6 +10,7 @@ public abstract class AbstractTriangle implements Triangle {
 
 
     public AbstractTriangle(Color color) {
+        System.out.printf("AbstractTriangle: AbstractTriangle(%s)%n", color);
         lengthOne = 1;
         lengthTwo = 1;
         lengthThree = 1;
@@ -17,6 +18,7 @@ public abstract class AbstractTriangle implements Triangle {
     }
 
     public AbstractTriangle(double lengthOne, double lengthTwo, double lengthThree, Color color) {
+        System.out.printf("AbstractTriangle: AbstractTriangle(%f, %f, %f, %s)%n", lengthOne, lengthTwo, lengthThree, color);
         boolean triInq = triangleInequality(lengthOne, lengthTwo, lengthThree);
         if (!triInq) {
             throw new IllegalArgumentException("Triangle Inequality");
