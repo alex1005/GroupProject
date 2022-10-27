@@ -6,7 +6,6 @@ public abstract class AbstractFactory {
         return switch(color) {
             case WHITE -> new WhiteFactory();
             case BLACK -> new BlackFactory();
-            default -> throw new IllegalArgumentException("Unknown color");
         };
     }
 }
